@@ -1,5 +1,5 @@
-echo Enter a Name: 
 echo Please enter a name with letters only. No less than 2 or greater than 20 characters.
+echo Enter a Name: 
 read name
 #while loop for verification
 while [[ -z  "$name" ]] || [[ $name =~ [^a-zA-Z]+ ]] || [[ ${#name} -lt 3 ]] || [[ ${#name} -gt 20 ]]
