@@ -1,18 +1,21 @@
 echo Enter a Name: 
+echo Please enter a name with letters only. No less than 2 or greater than 20 characters.
 read name
-
+#while loop for verification
 while [[ -z  "$name" ]] || [[ $name =~ [^a-zA-Z]+ ]] || [[ ${#name} -lt 3 ]] || [[ ${#name} -gt 20 ]]
 do
+	echo Enter a name with letters only. No less than 2 or greater than 20 characters.
 	echo Enter a Name: 
 	read name
 done 
 
 echo Welcome $name
-
+echo Please enter a number greater than 2 and less than 100.
 echo Enter a number:
 read number
-while [[ $number =~ [^0-9] ]] || [[ $number -gt 100 ]] || 
+while [[ $number =~ [^0-9] ]] || [[ $number -le 3 ]] || [[ $number -gt 100 ]]
 do
+	echo Enter a number greater than 2 and less than 100.
 	echo Enter a number:
 	read number
 done
@@ -29,5 +32,3 @@ do
 	echo $num
 	num=$((i+1))			
 done
-
-
